@@ -9,7 +9,6 @@ loadPage();
 
 function loadPage() {
     console.log(myArray);
-    localStorage.setItem('myArray', JSON.stringify(myArray));
     for (let i = 0; i < JSON.parse(localStorage.getItem('myArray')).length; i++) {
         const h2 = document.createElement('h2');
         div.appendChild(h2);
@@ -17,7 +16,7 @@ function loadPage() {
     }
 }
 
-localStorage.clear();
+// localStorage.clear();
 
 function appendNewObject() {
     const newObj = {phrase: input.value, name: input.value}
